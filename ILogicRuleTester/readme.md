@@ -17,6 +17,7 @@ Start writing your code in the module "ILogicStartModule" in the sub "Main()"
  I would like to add also functions for Parameter() but i did not manage that yet. If you want to help on this projetct then send a pull request.
 
 **Other functions that i use regularly:**
+
 | Function  | Parameters  | returns | description |
-| -- | -- | -- | -- |
+| --------- | ----------- | ------- | ----------- |
 |showtInventorObjectType| obj As Object | Nothing | Shows messagebox with the inventor object type|
