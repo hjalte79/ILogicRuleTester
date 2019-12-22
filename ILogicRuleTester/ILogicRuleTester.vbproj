@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E4416DF8-4222-4631-8024-2B7C99CD14B9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ILogicRuleTester.Module1</StartupObject>
+    <StartupObject>ILogicRuleTester.ILogicStartModule</StartupObject>
     <RootNamespace>ILogicRuleTester</RootNamespace>
     <AssemblyName>ILogicRuleTester</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -48,6 +48,21 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autodesk.iLogic">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2018\Bin\Autodesk.iLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.iLogic.CommonUI, Version=22.0.11200.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2018\Bin\Autodesk.iLogic.CommonUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.iLogic.Interfaces">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2018\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Inventor.Interop, Version=22.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Autodesk.Inventor.Interop\v4.0_22.0.0.0__d84147f8b4276564\Autodesk.Inventor.Interop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -69,7 +84,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="CadDoc.vb" />
+    <Compile Include="ILogicHelpers.vb" />
+    <Compile Include="ILogicStartModule.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -85,6 +102,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NotILogicHelper.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -105,6 +123,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
