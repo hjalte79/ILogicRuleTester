@@ -2,13 +2,12 @@
 Imports Autodesk.iLogic.Interfaces
 Imports Autodesk.iLogic.Automation
 
-Module ILogicStartModule
+Public Class ThisRule
 
     Sub Main()
 
-        Dim rule As ThisRule = New ThisRule()
-        rule.Main()
+        ' write your rule here
 
     End Sub
 
-End Module
+End Class
