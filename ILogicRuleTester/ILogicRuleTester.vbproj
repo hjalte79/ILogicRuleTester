@@ -84,9 +84,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadDoc.vb" />
+    <Compile Include="InterfaceClasses\CadDoc.vb" />
     <Compile Include="ILogicHelpers.vb" />
     <Compile Include="ILogicStartModule.vb" />
+    <Compile Include="InterfaceClasses\CadDrawing.vb" />
+    <Compile Include="InterfaceClasses\CadDrawingSheet.vb" />
+    <Compile Include="InterfaceClasses\CadDrawingView.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
