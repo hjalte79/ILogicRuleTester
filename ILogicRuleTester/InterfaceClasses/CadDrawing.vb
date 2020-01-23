@@ -5,8 +5,10 @@ Public Class CadDrawing
     Implements ICadDrawing
 
     Private doc As DrawingDocument
-    Public Sub New(document As DrawingDocument)
-        Me.doc = document
+    Public Sub New(document As Document)
+        If (document.DocumentType = DocumentTypeEnum.kDrawingDocumentObject) Then
+            Me.doc = document
+        End If
     End Sub
     Public ReadOnly Property Sheet(sheetName As String) As ICadDrawingSheet Implements ICadDrawing.Sheet
         Get

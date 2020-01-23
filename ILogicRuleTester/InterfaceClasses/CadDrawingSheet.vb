@@ -4,6 +4,13 @@ Imports Inventor
 Public Class CadDrawingSheet
     Implements ICadDrawingSheet
 
+    Public Sub New()
+        Try
+            Me._sheet = ThisDrawing.ActiveSheet.Sheet
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Public Sub New(sheet As Sheet)
         Me._sheet = sheet
     End Sub
