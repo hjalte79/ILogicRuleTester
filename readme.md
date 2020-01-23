@@ -51,3 +51,6 @@ see the project "InventorEventTester" in this solution.
  - DocumentEvents (only events from the document that was active when the program was started)
    - OnChange
    - OnChangeSelectSet
+ - UserInputEvents
+   - OnStartCommand
+   - OnActivateCommand

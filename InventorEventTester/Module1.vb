@@ -5,13 +5,16 @@ Module Module1
     Private inventor As Inventor.Application
     Private appEvents As ApplicationEvents
     Private docEvents As DocumentEvents
+    Private userInputEvents As UserInputEvents
 
     Sub Main()
 
         inventor = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
 
+
         subscribeToApplicationEvents()
         subscribeToDocumentEvents()
+        subscribeToUserInputEvents()
 
         'this will keep the code running long enough to catch the events.
         Console.ReadKey()
@@ -80,6 +83,24 @@ Module Module1
         HandlingCode = HandlingCodeEnum.kEventNotHandled
         Console.WriteLine(String.Format("docEvents_OnChangeSelectSet -> Timing:{0}",
                                         BeforeOrAfter.ToString()
+                                        ))
+    End Sub
+#End Region
+#Region "UserInputEvents"
+    Private Sub subscribeToUserInputEvents()
+        userInputEvents = inventor.CommandManager.UserInputEvents
+        AddHandler userInputEvents.OnStartCommand, AddressOf UserInputEvents_OnStartCommand
+        AddHandler userInputEvents.OnActivateCommand, AddressOf UserInputEvents_OnActivateCommand
+    End Sub
+
+    Private Sub UserInputEvents_OnActivateCommand(CommandName As String, Context As NameValueMap)
+        Console.WriteLine(String.Format("UserInputEvents_OnActivateCommand -> CommandName:{0} ",
+                                        CommandName))
+    End Sub
+
+    Private Sub UserInputEvents_OnStartCommand(CommandID As CommandIDEnum)
+        Console.WriteLine(String.Format("UserInputEvents_OnStartCommand -> CommandID:{0} ",
+                                        CommandID.ToString()
                                         ))
     End Sub
 #End Region
