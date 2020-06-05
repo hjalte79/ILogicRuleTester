@@ -9,7 +9,7 @@ Public Class CadDoc : Implements ICadDoc
 
     Public ReadOnly Property Path As String Implements ICadDoc.Path
         Get
-            Throw New NotImplementedException()
+            Return IO.Path.GetDirectoryName(_document.FullFileName)
         End Get
     End Property
 
@@ -41,6 +41,18 @@ Public Class CadDoc : Implements ICadDoc
     End Property
 
     Public ReadOnly Property ModelDocument As Document Implements ICadDoc.ModelDocument
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
+
+    Public ReadOnly Property Geometry As IGeometry Implements ICadDoc.Geometry
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
+
+    Public ReadOnly Property NamedEntities As NamedEntities Implements ICadDoc.NamedEntities
         Get
             Throw New NotImplementedException()
         End Get
