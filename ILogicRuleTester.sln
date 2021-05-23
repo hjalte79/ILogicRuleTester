@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ILogicRuleTester", "ILogicRuleTester\ILogicRuleTester.vbproj", "{E4416DF8-4222-4631-8024-2B7C99CD14B9}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorEventTester", "InventorEventTester\InventorEventTester.vbproj", "{0258E0A9-D740-4345-9205-6AB1F9BFE548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILogicRuleTesterC", "CTestProject\ILogicRuleTesterC.csproj", "{84735EBE-A251-405C-A32C-EBC720123A26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0258E0A9-D740-4345-9205-6AB1F9BFE548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0258E0A9-D740-4345-9205-6AB1F9BFE548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0258E0A9-D740-4345-9205-6AB1F9BFE548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84735EBE-A251-405C-A32C-EBC720123A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84735EBE-A251-405C-A32C-EBC720123A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84735EBE-A251-405C-A32C-EBC720123A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84735EBE-A251-405C-A32C-EBC720123A26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
