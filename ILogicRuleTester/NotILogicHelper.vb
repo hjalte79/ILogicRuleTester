@@ -14,6 +14,15 @@ Module NotILogicHelper
         MsgBox(CType(obj, T).ToString())
     End Sub
 
+    Public Sub showCommandNames(containigText As String)
+        For Each item As ControlDefinition In ThisApplication.CommandManager.ControlDefinitions
+            Dim name = item.InternalName
+            If name.Contains(containigText) Then
+                logger.Info(name)
+            End If
+        Next
+        Console.ReadKey()
+    End Sub
 
     Public Function getSelectedNode(topNode As BrowserNode) As BrowserNode
         Dim foundNode As BrowserNode = Nothing

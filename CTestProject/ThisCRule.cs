@@ -12,13 +12,7 @@ namespace CTestProject
     {
         public void Main()
         {
-            var doc = (DrawingDocument)ThisDoc.Document;
-            Sheet sheet = doc.ActiveSheet;
-            DrawingView view = sheet.DrawingViews[1];
-
-
+            // write your rule here
         }
-
-
     }
 }

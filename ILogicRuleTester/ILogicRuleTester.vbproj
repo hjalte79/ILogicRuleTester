@@ -97,6 +97,7 @@
     <Compile Include="InterfaceClasses\CadDrawing.vb" />
     <Compile Include="InterfaceClasses\CadDrawingSheet.vb" />
     <Compile Include="InterfaceClasses\CadDrawingView.vb" />
+    <Compile Include="Logger.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
