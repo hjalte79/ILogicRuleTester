@@ -58,13 +58,26 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.CommonUI.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.iLogic.Interfaces">
-      <HintPath>C:\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+    <Reference Include="Autodesk.iLogic.Core, Version=24.0.16800.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Autodesk.iLogic.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.Inventor.Interop, Version=24.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+    <Reference Include="Autodesk.iLogic.Interfaces, Version=24.0.16800.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.iLogic.Runtime, Version=24.0.16800.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.iLogic.Types, Version=24.0.16800.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Autodesk.iLogic.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Inventor.Interop, Version=26.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>C:\Program Files\Autodesk\Inventor 2020\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
     </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -91,12 +104,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InterfaceClasses\CadDoc.vb" />
     <Compile Include="ILogicHelpers.vb" />
     <Compile Include="ILogicStartModule.vb" />
-    <Compile Include="InterfaceClasses\CadDrawing.vb" />
-    <Compile Include="InterfaceClasses\CadDrawingSheet.vb" />
-    <Compile Include="InterfaceClasses\CadDrawingView.vb" />
     <Compile Include="Logger.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
