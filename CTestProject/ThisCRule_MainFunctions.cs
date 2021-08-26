@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ILogicRuleTester;
+using Autodesk.iLogic.Runtime;
 
 namespace CTestProject
 {
@@ -15,8 +15,8 @@ namespace CTestProject
 
         public ThisCRule()
         {
-            this.ThisDoc = ILogicHelpers.ThisDoc;
-            this.ThisApplication = ILogicHelpers.ThisApplication;
+            this.ThisApplication = (Inventor.Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application");
+            this.ThisDoc = new CadDoc(ThisApplication.ActiveDocument);
         }
 
     }

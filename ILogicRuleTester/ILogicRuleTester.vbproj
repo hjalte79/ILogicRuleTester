@@ -51,13 +51,6 @@
     <Reference Include="Autodesk.iLogic">
       <HintPath>C:\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.iLogic.Automation">
-      <HintPath>C:\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Automation.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.iLogic.CommonUI, Version=22.0.11200.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.CommonUI.dll</HintPath>
-    </Reference>
     <Reference Include="Autodesk.iLogic.Core, Version=24.0.16800.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Autodesk.iLogic.Core.dll</HintPath>
@@ -76,7 +69,7 @@
     </Reference>
     <Reference Include="Autodesk.Inventor.Interop, Version=26.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>C:\Program Files\Autodesk\Inventor 2022\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
     </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
