@@ -5,10 +5,10 @@ Imports Autodesk.iLogic.Core
 
 Public Module ILogicHelpers
 
-    Public ThisApplication As Inventor.Application = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
-    Public ThisDoc As ICadDoc = New CadDoc(ThisApplication.ActiveDocument)
-    Public ThisDrawing As ICadDrawing = New CadDrawing(ThisApplication.ActiveDocument, ThisApplication)
-    Public ActiveSheet As ICadDrawingSheet = New CadDrawingSheet(CType(ThisDrawing, CadDrawing), ThisDrawing.ActiveSheet.Sheet, ThisApplication)
+    Public ThisApplication As Inventor.Application
+    Public ThisDoc As ICadDoc
+    Public ThisDrawing As ICadDrawing
+    Public ActiveSheet As ICadDrawingSheet
 
     Public Property Parameter(name As String) As Object
         Get
