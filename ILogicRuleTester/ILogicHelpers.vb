@@ -9,15 +9,35 @@ Public Module ILogicHelpers
     Public ThisDoc As ICadDoc
     Public ThisDrawing As ICadDrawing
     Public ActiveSheet As ICadDrawingSheet
+    Public iProperties As IiProperties
+    Private uof As UnitsOfMeasure
+
 
     Public Property Parameter(name As String) As Object
         Get
-            Return getParameter(name).Value
+            Dim param As Parameter = getParameter(name)
+            Dim value As Double = uof.ConvertUnits(
+                    param.Value,
+                    uof.GetTypeFromString(
+                        uof.GetDatabaseUnitsFromExpression(param.Expression, param.Units)),
+                    param.Units)
+            Return value
         End Get
         Set(value As Object)
             getParameter(name).Expression = value
         End Set
     End Property
+
+    Public Sub setUnitsOfMeasure()
+
+        Dim doc As Document = ThisDoc.Document
+        If (doc.DocumentType = DocumentTypeEnum.kPartDocumentObject) Then
+            uof = doc.UnitsOfMeasure
+        ElseIf (doc.DocumentType = DocumentTypeEnum.kAssemblyDocumentObject) Then
+            uof = doc.UnitsOfMeasure
+        End If
+
+    End Sub
 
     Private Function getParameter(name As String) As Parameter
         Dim doc As Document = ThisDoc.Document

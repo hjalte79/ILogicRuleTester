@@ -10,11 +10,16 @@ Module ILogicStartModule
         ThisApplication = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
         ThisDoc = New CadDoc(ThisApplication.ActiveDocument)
 
+        Dim h As iLogic.StylesInEnglishHandler = New iLogic.StylesInEnglishHandler()
+        iProperties = New iLogic.CadPropertiesInRule(ThisApplication.ActiveDocument, h)
+
+
         If (ThisDoc.Document.DocumentType = DocumentTypeEnum.kDrawingDocumentObject) Then
             ThisDrawing = New CadDrawing(ThisApplication.ActiveDocument, ThisApplication)
             ActiveSheet = New CadDrawingSheet(CType(ThisDrawing, CadDrawing), ThisDrawing.ActiveSheet.Sheet, ThisApplication)
         End If
 
+        setUnitsOfMeasure()
         Dim rule As ThisRule = New ThisRule()
         rule.Main()
 
