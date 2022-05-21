@@ -1,7 +1,6 @@
 ﻿Imports Inventor
-Imports Autodesk.iLogic.Interfaces
-Imports Autodesk.iLogic.Automation
 Imports Autodesk.iLogic.Runtime
+Imports iLogic
 
 Module ILogicStartModule
 
@@ -18,6 +17,8 @@ Module ILogicStartModule
             ThisDrawing = New CadDrawing(ThisApplication.ActiveDocument, ThisApplication)
             ActiveSheet = New CadDrawingSheet(CType(ThisDrawing, CadDrawing), ThisDrawing.ActiveSheet.Sheet, ThisApplication)
         End If
+
+        Measure = New CadMeasure(ThisDoc.Document, ThisApplication)
 
         setUnitsOfMeasure()
         Dim rule As ThisRule = New ThisRule()

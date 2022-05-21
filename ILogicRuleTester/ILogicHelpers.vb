@@ -11,7 +11,7 @@ Public Module ILogicHelpers
     Public ActiveSheet As ICadDrawingSheet
     Public iProperties As IiProperties
     Private uof As UnitsOfMeasure
-
+    Public Measure As ICadMeasure
 
     Public Property Parameter(name As String) As Object
         Get
