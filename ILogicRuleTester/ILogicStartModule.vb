@@ -21,9 +21,13 @@ Module ILogicStartModule
         Measure = New CadMeasure(ThisDoc.Document, ThisApplication)
 
         setUnitsOfMeasure()
+
+        Diagnostics.Debug.WriteLine("---------------------- Start rule ---------------------")
+
         Dim rule As ThisRule = New ThisRule()
         rule.Main()
 
+        Diagnostics.Debug.WriteLine("----------------------- End rule ----------------------")
     End Sub
 
 End Module
