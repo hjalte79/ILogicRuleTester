@@ -6,6 +6,7 @@ Module Module1
     Private appEvents As ApplicationEvents
     Private docEvents As DocumentEvents
     Private userInputEvents As UserInputEvents
+    Private fileUIEvents As FileUIEvents
 
     Sub Main()
 
@@ -15,6 +16,7 @@ Module Module1
         subscribeToApplicationEvents()
         subscribeToDocumentEvents()
         subscribeToUserInputEvents()
+        subscribeToFileUIEvents()
 
         'this will keep the code running long enough to catch the events.
         Console.ReadKey()
@@ -104,4 +106,20 @@ Module Module1
                                         ))
     End Sub
 #End Region
+
+#Region "FileUIEvents"
+    Private Sub subscribeToFileUIEvents()
+        fileUIEvents = inventor.FileUIEvents
+        AddHandler fileUIEvents.OnFileOpenDialog, AddressOf FileUIEvents_OnFileOpenDialog
+        AddHandler userInputEvents.OnActivateCommand, AddressOf UserInputEvents_OnActivateCommand
+    End Sub
+
+    Private Sub FileUIEvents_OnFileOpenDialog(ByRef FileTypes() As String, ParentHWND As Integer, ByRef FileName As String, Context As NameValueMap, ByRef HandlingCode As HandlingCodeEnum)
+        Console.WriteLine($"FileUIEvents_OnFileOpenDialog -> FileName:{FileName} ")
+    End Sub
+
+#End Region
+
+
+
 End Module

@@ -21,6 +21,7 @@ Module ILogicStartModule
         Measure = New CadMeasure(ThisDoc.Document, ThisApplication)
 
         setUnitsOfMeasure()
+        iLogicVb.LoadiLogicAddin()
 
         Diagnostics.Debug.WriteLine("---------------------- Start rule ---------------------")
 
