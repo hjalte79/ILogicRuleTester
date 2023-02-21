@@ -1,8 +1,12 @@
 ﻿Imports Inventor
 
-Module NotILogicHelper
+Public Module NotILogicHelper
 
     Public Sub showtInventorObjectType(obj As Object)
+        If (obj Is Nothing) Then
+            MsgBox("Nothing selected")
+            Return
+        End If
         showEnumName(Of ObjectTypeEnum)(obj.type)
         ' MsgBox(CType(obj.type, ObjectTypeEnum).ToString()) ' in 1 line
         'Console.WriteLine( ((ObjectTypeEnum)test.type).ToString() ); // in c#
