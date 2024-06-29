@@ -16,11 +16,17 @@ Public Module ILogicHelpers
     Public Property Parameter(name As String) As Object
         Get
             Dim param As Parameter = getParameter(name)
-            Dim value As Double = uof.ConvertUnits(
+            Dim value = param.Value
+            Try
+                value = uof.ConvertUnits(
                     param.Value,
                     uof.GetTypeFromString(
                         uof.GetDatabaseUnitsFromExpression(param.Expression, param.Units)),
                     param.Units)
+            Catch ex As Exception
+
+            End Try
+
             Return value
         End Get
         Set(value As Object)
