@@ -15,7 +15,7 @@ namespace CTestProject
 
         public ThisCRule()
         {
-            this.ThisApplication = (Inventor.Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application");
+            this.ThisApplication = (Inventor.Application)Marshal2.GetActiveObject("Inventor.Application");
             this.ThisDoc = new CadDoc(ThisApplication.ActiveDocument);
         }
 

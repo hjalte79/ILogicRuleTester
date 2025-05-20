@@ -9,7 +9,7 @@ Module ILogicStartModule
 
     Sub Main()
         Try
-            ThisApplication = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+            ThisApplication = Marshal2.GetActiveObject("Inventor.Application")
         Catch ex As Exception
             ' ThisApplication = CreateObject("Inventor.Application")
 

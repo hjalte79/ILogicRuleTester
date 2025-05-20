@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILogicRuleTesterC", "CTestP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorApprenticeTester", "ApprenticeTester\InventorApprenticeTester.csproj", "{69150B51-D481-4439-8144-BC11371EE46B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeFormTest", "ThemeFormTest\ThemeFormTest.csproj", "{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,14 +51,6 @@ Global
 		{69150B51-D481-4439-8144-BC11371EE46B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69150B51-D481-4439-8144-BC11371EE46B}.Release|x64.ActiveCfg = Release|Any CPU
 		{69150B51-D481-4439-8144-BC11371EE46B}.Release|x64.Build.0 = Release|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Debug|x64.Build.0 = Debug|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Release|x64.ActiveCfg = Release|Any CPU
-		{E124CA5B-10A6-4644-97CB-6ABC9DCFC787}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

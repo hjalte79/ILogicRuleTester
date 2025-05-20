@@ -10,7 +10,7 @@ Module Module1
 
     Sub Main()
 
-        inventor = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+        inventor = Marshal2.GetActiveObject("Inventor.Application")
 
 
         subscribeToApplicationEvents()

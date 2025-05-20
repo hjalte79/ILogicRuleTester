@@ -4,16 +4,6 @@ I write a lot of iLogic rules. Mostly examples for people on the [autodesk Inven
 ## Project goal
 My goal is to make a project that helps me create iLogic code that i can copy directly into Inventor. 
 
-## setup.
-This project need refrences to the folowwing dll's:
- - C:\Program Files\Autodesk\Inventor 2018\Bin\Autodesk.iLogic.dll
- - C:\Program Files\Autodesk\Inventor 2018\Bin\Autodesk.iLogic.CommonUI.dll 
- - C:\Program Files\Autodesk\Inventor 2018\Bin\Autodesk.iLogic.Interfaces.dll
- - C:\Program Files\Autodesk\Inventor 2018\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll
-
-This are the default paths. In the solution other paths are used. You need to set the references to your own installation paths.
-(probably the default paths as mentioned above)
-
 ## How to use.
 Start writing your code in the module "ILogicStartModule" in the sub "Main()"
 
